@@ -14,7 +14,7 @@ fpm1.9.1 \
     -d openjdk-7-jre \
     -a all \
     -m "<lesspublic@gmail.com>" \
-    --pre-install logstash-packaging/logstash.preinstall \
+    --pre-install logstash.preinstall \
     --description "Logstash Open Source Log Management" \
     --url 'http://www.logstash.net/' \
     --config-files etc/logstash/syslog.conf \
