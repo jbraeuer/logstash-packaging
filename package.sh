@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION=1.1.9
-
+RELEASE=1
 set -e
 
 if [ ! -f usr/share/logstash/logstash.jar ]; then
@@ -10,7 +10,7 @@ if [ ! -f usr/share/logstash/logstash.jar ]; then
 fi
 fpm1.9.1 \
     -n logstash \
-    -v "$VERSION" \
+    -v "$VERSION-$RELEASE" \
     -d openjdk-7-jre \
     -a all \
     -m "<lesspublic@gmail.com>" \
