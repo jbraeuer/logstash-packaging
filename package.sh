@@ -4,8 +4,10 @@ VERSION=1.1.9
 
 set -e
 
-wget "http://logstash.objects.dreamhost.com/release/logstash-${VERSION}-monolithic.jar" \
-    -O usr/share/logstash/logstash.jar
+if [ ! -f usr/share/logstash/logstash.jar ]; then
+    wget "http://logstash.objects.dreamhost.com/release/logstash-${VERSION}-monolithic.jar" \
+        -O usr/share/logstash/logstash.jar
+fi
 fpm1.9.1 \
     -n logstash \
     -v "$VERSION" \
