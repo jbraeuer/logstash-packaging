@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.1.10
+VERSION=1.1.12
 RELEASE=1
 set -e
 
